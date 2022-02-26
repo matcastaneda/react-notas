@@ -2,8 +2,21 @@
 
 # dependencies
 /node_modules
+jspm_packages/
 /.pnp
 .pnp.js
+
+#vscode settings
+.vscode
+
+# Distribution directories
+dist/
+
+# cache directory
+.npm
+.eslintcache
+.node_repl_history
+*.tgz
 
 # testing
 /coverage

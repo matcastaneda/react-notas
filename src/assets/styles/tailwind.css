@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply relative;
+  }
+
+  body {
+    @apply bg-slate-200 min-h-screen font-montserrat;
+  }
+}
+
+@layer components {
+  .colorActive {
+    @apply before:content-[''] before:opacity-50 before:absolute before:border-2 before:border-slate-400 before:rounded-full before:left-1/2 before:top-1/2 before:-mt-[17px] before:-ml-[17px] before:mb-0 before:mr-0 before:w-[34px] before:h-[34px];
+  }
+}
