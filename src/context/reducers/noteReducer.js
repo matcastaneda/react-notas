@@ -3,7 +3,10 @@ import { type } from './type';
 // * Estado inical de la nota
 // * Se extrae del Local Storage del computador
 export const initialNoteState = {
-  notes: [],
+  notes:
+    localStorage.getItem('notes') === null
+      ? []
+      : JSON.parse(localStorage.getItem('notes')),
 };
 
 export const noteReducer = (state = initialNoteState, action = {}) => {

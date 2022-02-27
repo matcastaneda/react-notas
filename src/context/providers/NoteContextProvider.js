@@ -1,9 +1,13 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { noteContext } from '../noteContext';
 import { initialNoteState, noteReducer } from '../reducers/noteReducer';
 
 export const NoteContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(noteReducer, initialNoteState);
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(state.notes));
+  }, [state.notes]);
 
   // * Añadir una nueva nota
   const addNote = note => {
