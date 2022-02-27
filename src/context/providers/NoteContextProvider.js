@@ -2,7 +2,7 @@ import { useReducer } from 'react';
 import { noteContext } from '../noteContext';
 import { initialNoteState, noteReducer } from '../reducers/noteReducer';
 
-export const NoteProvider = ({ children }) => {
+export const NoteContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(noteReducer, initialNoteState);
 
   // * Añadir una nueva nota
