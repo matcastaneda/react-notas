@@ -35,9 +35,17 @@ const NoteForm = () => {
 
     const noteFormated = note.description.trim();
 
+    const newNote = {
+      note: noteFormated,
+      id: uuid4(),
+      create_at: getDateCreationNote(),
+      create_at_full: Date.now(),
+      color: color,
+    };
+
     try {
       if (noteFormated !== '') {
-        console.log(noteFormated);
+        addNote(newNote);
         toast.success('Nota añadida', { duration: 2500 });
       }
 
@@ -54,9 +62,17 @@ const NoteForm = () => {
 
       const noteFormated = note.description.trim();
 
+      const newNote = {
+        note: noteFormated,
+        id: uuid4(),
+        create_at: getDateCreationNote(),
+        create_at_full: Date.now(),
+        color: color,
+      };
+
       try {
         if (noteFormated !== '') {
-          console.log(noteFormated);
+          addNote(newNote);
           toast.success('Nota añadida', { duration: 2500 });
         }
 
