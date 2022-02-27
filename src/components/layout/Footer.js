@@ -33,7 +33,7 @@ const Footer = () => {
             </span>
 
             <Social
-              url="https://github.com/matcastaneda/react-notes"
+              url="https://github.com/matcastaneda/react-notas"
               background="#0D1117"
               logo={
                 <svg
