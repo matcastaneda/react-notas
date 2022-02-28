@@ -9,7 +9,7 @@ import { colors } from './utils/colors';
 const NoteForm = () => {
   const { addNote } = useNoteContext();
 
-  const [note, setNote] = useState({ description: '' });
+  const [newNote, setNewNote] = useState({ description: '' });
   const [colorActive, setColorActive] = useState(1);
   const [color, setColor] = useState('#47AEE2');
 
@@ -25,7 +25,7 @@ const NoteForm = () => {
   // * Funcion para cambiar el texto de la nota
   const handleChangeNote = ({ target: { name, value } }) => {
     if (limitCharacters - value.length >= 0) {
-      setNote({ ...note, [name]: value });
+      setNewNote({ ...newNote, [name]: value });
     }
   };
 
@@ -33,23 +33,21 @@ const NoteForm = () => {
   const handleSubmitNote = e => {
     e.preventDefault();
 
-    const noteFormated = note.description.trim();
-
-    const newNote = {
-      note: noteFormated,
-      id: uuid4(),
-      create_at: getDateCreationNote(),
-      create_at_full: Date.now(),
-      color: color,
-    };
+    const note = newNote.description.trim();
 
     try {
-      if (noteFormated !== '') {
-        addNote(newNote);
+      if (newNote !== '') {
+        addNote({
+          note,
+          id: uuid4(),
+          create_at: getDateCreationNote(),
+          create_at_full: Date.now(),
+          color: color,
+        });
         toast.success('Nota añadida', { duration: 2500 });
       }
 
-      setNote({ ...note, description: '' });
+      setNewNote({ ...note, description: '' });
     } catch (error) {
       toast.error('Algo salió mal 😥 => ', error.message, { duration: 2500 });
     }
@@ -60,23 +58,21 @@ const NoteForm = () => {
     if (e.which === 13 && !e.shiftKey) {
       e.preventDefault();
 
-      const noteFormated = note.description.trim();
-
-      const newNote = {
-        note: noteFormated,
-        id: uuid4(),
-        create_at: getDateCreationNote(),
-        create_at_full: Date.now(),
-        color: color,
-      };
+      const note = newNote.description.trim();
 
       try {
-        if (noteFormated !== '') {
-          addNote(newNote);
+        if (newNote !== '') {
+          addNote({
+            note,
+            id: uuid4(),
+            create_at: getDateCreationNote(),
+            create_at_full: Date.now(),
+            color: color,
+          });
           toast.success('Nota añadida', { duration: 2500 });
         }
 
-        setNote({ ...note, description: '' });
+        setNewNote({ ...note, description: '' });
       } catch (error) {
         toast.error('Algo salió mal 😥 => ', error.message, { duration: 2500 });
       }
@@ -96,7 +92,7 @@ const NoteForm = () => {
         <textarea
           onChange={handleChangeNote}
           onKeyDown={handleEnterSubmit}
-          value={note.description}
+          value={newNote.description}
           name="description"
           id="description"
           cols="30"
@@ -108,7 +104,7 @@ const NoteForm = () => {
 
         <span className="absolute bottom-0 right-0">
           <small className="opacity-40">
-            {limitCharacters - note.description.length}
+            {limitCharacters - newNote.description.length}
           </small>
         </span>
       </div>
