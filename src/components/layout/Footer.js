@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="font-varela_round absolute bottom-0 left-0 w-full bg-slate-300">
       <div className="max-w-7xl m-auto">
-        <div className="container-ecommit flex flex-col md:flex-row md:px-6 items-center justify-between py-5 md:py-7 lg:py-10 break-words">
+        <div className="flex flex-col md:flex-row md:px-6 items-center justify-between py-5 md:py-7 lg:py-10 break-words">
           <div className="mb-5 md:mb-0">
             Creado con ❤️ por{' '}
             <span className="relative italic font-bold">Matías Castañeda</span>

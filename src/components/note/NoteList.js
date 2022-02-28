@@ -7,7 +7,7 @@ const NoteList = () => {
   return (
     <>
       {notes.length === 0 ? (
-        <div className="container-ecommit md:py-10 px-3 md:px-10">
+        <div className="md:py-10 px-3 md:px-10">
           <p className="text-lg md:text-xl select-none">
             No encontramos ninguna nota. 🔍️
           </p>
