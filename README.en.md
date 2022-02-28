@@ -1,3 +1,5 @@
+> :earth_americas: [Español](https://github.com/matcastaneda/react-notas/blob/main/README.md) • [English](https://github.com/matcastaneda/react-notas/blob/main/README.en.md)
+
 # :wave: Welcome to React-Notas
 
 ![License](https://img.shields.io/github/license/matcastaneda/react-notas?style=flat-square&label=license) ![Version](https://img.shields.io/github/package-json/v/matcastaneda/react-notas?style=flat-square&label=Version) ![React badge](https://img.shields.io/badge/React-17%2E0%2E2-blue.svg?style=flat-square&logo=react&logoColor=%2361DAFB) [![Framework CSS: prettier](https://img.shields.io/badge/CSS_Framework-Tailwind-06B6D4.svg?style=flat-square&logo=Tailwind%20CSS)](https://tailwindcss.com/) [![Estilo Código: prettier](https://img.shields.io/badge/Style-Prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -39,9 +41,11 @@ npm start
 ## :open_book: License
 
 > :paperclip: React-Notas is available under the [license MIT](https://opensource.org/licenses/mit-license.php).
+
 ## :desktop_computer: Author
 
 > :bust_in_silhouette: **Matías Castañeda** :heavy_check_mark: [Twitter](https://twitter.com/maticmondaca) :heavy_check_mark: [GitHub](https://github.com/matcastaneda)
+
 ## :heart: Show your support
 
 Give a :star: if this project helped you!

@@ -1,3 +1,5 @@
+> :earth_americas: [Español](https://github.com/matcastaneda/react-notas/blob/main/README.md) • [English](https://github.com/matcastaneda/react-notas/blob/main/README.en.md)
+
 # :wave: Bienvenidos a React-Notas
 
 ![Lisencia](https://img.shields.io/github/license/matcastaneda/react-notas?style=flat-square&label=Licencia) ![Version](https://img.shields.io/github/package-json/v/matcastaneda/react-notas?style=flat-square&label=Versión) ![React badge](https://img.shields.io/badge/React-17%2E0%2E2-blue.svg?style=flat-square&logo=react&logoColor=%2361DAFB) [![Framework CSS: prettier](https://img.shields.io/badge/CSS_Framework-Tailwind-06B6D4.svg?style=flat-square&logo=Tailwind%20CSS)](https://tailwindcss.com/) [![Estilo Código: prettier](https://img.shields.io/badge/Estilo-Prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
