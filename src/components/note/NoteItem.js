@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { PencilIcon, TrashIcon, XIcon } from '@heroicons/react/solid';
 
 import { useNoteContext } from '../../context/noteContext';
+import timeAgoNote from '../../functions/TimeAgoNote/timeAgoNote';
 
 /**
  * @param id
@@ -124,6 +125,14 @@ const NoteItem = ({ id, note, create_at, create_at_full, color }) => {
         <small className="font-varela_round font-semibold tracking-wide text-white">
           ~ {create_at}
         </small>
+
+        {selectEdit ? (
+          ''
+        ) : (
+          <p className="text-xs italic pb-0.5 font-montserrat font-extralight tracking-wide text-white">
+            {timeAgoNote(create_at_full, 'es')}
+          </p>
+        )}
       </section>
     </article>
   );
