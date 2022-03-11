@@ -36,7 +36,7 @@ const NoteForm = () => {
     const note = newNote.description.trim();
 
     try {
-      if (newNote !== '') {
+      if (note !== '') {
         addNote({
           note,
           id: uuid4(),
@@ -47,7 +47,7 @@ const NoteForm = () => {
         toast.success('Nota añadida', { duration: 2500 });
       }
 
-      setNewNote({ ...note, description: '' });
+      setNewNote({ ...newNote, description: '' });
     } catch (error) {
       toast.error('Algo salió mal 😥 => ', error.message, { duration: 2500 });
     }
@@ -61,7 +61,7 @@ const NoteForm = () => {
       const note = newNote.description.trim();
 
       try {
-        if (newNote !== '') {
+        if (note !== '') {
           addNote({
             note,
             id: uuid4(),
@@ -72,7 +72,7 @@ const NoteForm = () => {
           toast.success('Nota añadida', { duration: 2500 });
         }
 
-        setNewNote({ ...note, description: '' });
+        setNewNote({ ...newNote, description: '' });
       } catch (error) {
         toast.error('Algo salió mal 😥 => ', error.message, { duration: 2500 });
       }
